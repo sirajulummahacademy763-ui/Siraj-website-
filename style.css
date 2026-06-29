@@ -1,0 +1,878 @@
+/* ===========================
+   Sirajul Ummatul Islamiyah
+   Main Stylesheet
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:#f7f9f8;
+
+color:#222;
+
+line-height:1.7;
+
+}
+
+/* Container */
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* Header */
+
+header{
+
+background:#0b5d3b;
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+header .container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+flex-wrap:wrap;
+
+}
+
+/* Logo */
+
+.logo h1{
+
+font-family:'Cairo',sans-serif;
+
+color:#FFD54F;
+
+font-size:34px;
+
+}
+
+.logo p{
+
+color:white;
+
+font-size:15px;
+
+}
+
+/* Navigation */
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#FFD54F;
+
+}
+
+.login-btn{
+
+background:#FFD54F;
+
+color:#0b5d3b;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+}
+
+.login-btn:hover{
+
+background:white;
+
+}
+
+/* Hero */
+
+.hero{
+
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("../images/mosque.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+padding:140px 0;
+
+text-align:center;
+
+color:white;
+
+}
+
+.hero h2{
+
+font-size:52px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+max-width:800px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+background:#FFD54F;
+
+padding:15px 35px;
+
+border-radius:35px;
+
+color:#0b5d3b;
+
+font-weight:bold;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-3px);
+
+}
+
+.btn-secondary{
+
+background:white;
+
+padding:15px 35px;
+
+border-radius:35px;
+
+text-decoration:none;
+
+color:#0b5d3b;
+
+font-weight:bold;
+
+}
+
+/* Features */
+
+.features{
+
+padding:90px 0;
+
+}
+
+.features h2{
+
+text-align:center;
+
+margin-bottom:50px;
+
+font-size:40px;
+
+color:#0b5d3b;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#0b5d3b;
+
+}
+
+/* About */
+
+.about-preview{
+
+background:white;
+
+padding:90px 0;
+
+text-align:center;
+
+}
+
+.about-preview h2{
+
+font-size:40px;
+
+margin-bottom:25px;
+
+color:#0b5d3b;
+
+}
+
+.about-preview p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:18px;
+
+}
+
+/* Statistics */
+
+.statistics{
+
+background:#0b5d3b;
+
+padding:80px 0;
+
+}
+
+.statistics .container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.stat-box{
+
+color:white;
+
+}
+
+.stat-box h3{
+
+font-size:48px;
+
+color:#FFD54F;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#052b1b;
+
+padding:40px;
+
+text-align:center;
+
+color:white;
+
+}
+
+footer h3{
+
+font-family:'Cairo',sans-serif;
+
+color:#FFD54F;
+
+margin-bottom:15px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header .container{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+justify-content:center;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.features h2,
+
+.about-preview h2{
+
+font-size:30px;
+
+}
+
+}
+
+
+/* ==========================
+   Login Page
+========================== */
+
+.login-page{
+
+min-height:85vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#eef5f1;
+
+padding:50px 20px;
+
+}
+
+.login-box{
+
+width:100%;
+
+max-width:450px;
+
+background:white;
+
+padding:40px;
+
+border-radius:18px;
+
+box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+}
+
+.login-box h2{
+
+text-align:center;
+
+color:#0b5d3b;
+
+margin-bottom:10px;
+
+}
+
+.login-box p{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.input-group{
+
+margin-bottom:20px;
+
+}
+
+.input-group label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+.input-group input{
+
+width:100%;
+
+padding:14px;
+
+border:1px solid #ccc;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.input-group input:focus{
+
+outline:none;
+
+border-color:#0b5d3b;
+
+}
+
+.remember{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:25px;
+
+font-size:14px;
+
+}
+
+.remember a{
+
+text-decoration:none;
+
+color:#0b5d3b;
+
+}
+
+.login-box button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:10px;
+
+background:#0b5d3b;
+
+color:white;
+
+font-size:17px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.login-box button:hover{
+
+background:#08452c;
+
+}
+
+.register-link{
+
+margin-top:25px;
+
+text-align:center;
+
+}
+
+.register-link a{
+
+color:#0b5d3b;
+
+font-weight:bold;
+
+text-decoration:none;
+
+}
+
+/* ==========================
+   Register Page
+========================== */
+
+.register-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:50px 20px;
+
+background:#eef5f1;
+
+}
+
+.register-box{
+
+width:100%;
+
+max-width:550px;
+
+background:white;
+
+padding:40px;
+
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.register-box h2{
+
+text-align:center;
+
+color:#0b5d3b;
+
+margin-bottom:10px;
+
+}
+
+.register-box p{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.register-box button{
+
+width:100%;
+
+margin-top:20px;
+
+padding:15px;
+
+background:#0b5d3b;
+
+border:none;
+
+color:white;
+
+font-size:17px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.register-box button:hover{
+
+background:#08452c;
+
+}
+
+
+/* Dashboard */
+
+.dashboard{
+
+display:flex;
+
+min-height:100vh;
+
+}
+
+.dashboard-sidebar{
+
+width:260px;
+
+background:#0b5d3b;
+
+padding:30px;
+
+color:white;
+
+}
+
+.dashboard-sidebar ul{
+
+list-style:none;
+
+margin-top:25px;
+
+}
+
+.dashboard-sidebar li{
+
+margin:18px 0;
+
+}
+
+.dashboard-sidebar a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+}
+
+.dashboard-content{
+
+flex:1;
+
+padding:40px;
+
+background:#f5f7f8;
+
+}
+
+.dashboard-cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+
+/* ==============================
+   Admin Dashboard
+============================== */
+
+.dashboard-content h2{
+
+color:#0b5d3b;
+
+margin-bottom:10px;
+
+}
+
+.dashboard-content h3{
+
+margin-top:20px;
+
+color:#0b5d3b;
+
+}
+
+.dashboard-sidebar h3{
+
+margin-bottom:25px;
+
+color:#FFD54F;
+
+}
+
+/* ===========================
+   Coin Wallet
+=========================== */
+
+.wallet-page{
+
+padding:80px 20px;
+
+background:#f4f7f6;
+
+min-height:100vh;
+
+}
+
+.wallet-page h2{
+
+color:#0b5d3b;
+
+margin-bottom:20px;
+
+}
+
+.wallet-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+margin-bottom:50px;
+
+}
+
+.wallet-card h1{
+
+font-size:50px;
+
+color:#FFD54F;
+
+margin:15px 0;
+
+}
+
+.wallet-packages{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:30px;
+
+}
+
+.wallet-packages button{
+
+margin-top:20px;
+
+padding:12px 20px;
+
+background:#0b5d3b;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+.wallet-packages button:hover{
+
+background:#08452c;
+
+}
+
+.wallet-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+background:white;
+
+}
+
+.wallet-table th,
+
+.wallet-table td{
+
+padding:15px;
+
+border:1px solid #ddd;
+
+text-align:center;
+
+}
+
+.wallet-table th{
+
+background:#0b5d3b;
+
+color:white;
+
+}
