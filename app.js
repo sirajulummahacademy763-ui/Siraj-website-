@@ -31,3 +31,67 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(card);
     });
 });
+
+
+const GAS_WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const registerForm = document.getElementById("registerForm");
+
+  if (registerForm) {
+    registerForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const messageBox = document.getElementById("registerMessage");
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const country = document.getElementById("country").value.trim();
+      const terms = document.getElementById("terms").checked;
+
+      if (!terms) {
+        messageBox.textContent = "You must agree to the Terms and Conditions.";
+        messageBox.style.color = "red";
+        return;
+      }
+
+      messageBox.textContent = "Creating account...";
+      messageBox.style.color = "#0b5d3b";
+
+      try {
+        const response = await fetch(GAS_WEB_APP_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify({
+            action: "register",
+            fullName,
+            email,
+            phone,
+            password,
+            confirmPassword,
+            country
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          messageBox.textContent = "Account created successfully. You can now log in.";
+          messageBox.style.color = "green";
+          registerForm.reset();
+        } else {
+          messageBox.textContent = result.message || "Registration failed.";
+          messageBox.style.color = "red";
+        }
+      } catch (error) {
+        messageBox.textContent = "Network error. Please try again.";
+        messageBox.style.color = "red";
+      }
+    });
+  }
+});
