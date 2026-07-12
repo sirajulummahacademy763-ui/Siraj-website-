@@ -42,78 +42,46 @@
 
 <form id="registerForm">
 
-<div class="input-group">
+  <div class="input-group">
+    <label>Full Name</label>
+    <input id="fullName" type="text" placeholder="Enter your full name" required>
+  </div>
 
-<label>Full Name</label>
+  <div class="input-group">
+    <label>Email Address</label>
+    <input id="email" type="email" placeholder="Enter your email" required>
+  </div>
 
-<input type="text" placeholder="Enter your full name" required>
+  <div class="input-group">
+    <label>Phone Number</label>
+    <input id="phone" type="tel" placeholder="Enter your phone number" required>
+  </div>
 
-</div>
+  <div class="input-group">
+    <label>Create Password</label>
+    <input id="password" type="password" placeholder="Create a password" required>
+  </div>
 
-<div class="input-group">
+  <div class="input-group">
+    <label>Confirm Password</label>
+    <input id="confirmPassword" type="password" placeholder="Confirm your password" required>
+  </div>
 
-<label>Email Address</label>
+  <div class="input-group">
+    <label>Country</label>
+    <input id="country" type="text" placeholder="Your country">
+  </div>
 
-<input type="email" placeholder="Enter your email" required>
+  <label>
+    <input id="terms" type="checkbox" required>
+    I agree to the Terms and Conditions.
+  </label>
 
-</div>
+  <button type="submit">Create Account</button>
 
-<div class="input-group">
-
-<label>Phone Number</label>
-
-<input type="tel" placeholder="Enter your phone number" required>
-
-</div>
-
-<div class="input-group">
-
-<label>Create Password</label>
-
-<input type="password" placeholder="Create a password" required>
-
-</div>
-
-<div class="input-group">
-
-<label>Confirm Password</label>
-
-<input type="password" placeholder="Confirm your password" required>
-
-</div>
-
-<div class="input-group">
-
-<label>Country</label>
-
-<input type="text" placeholder="Your country">
-
-</div>
-
-<div class="input-group">
-
-<label>Profile Picture</label>
-
-<input type="file" accept="image/*">
-
-</div>
-
-<label>
-
-<input type="checkbox" required>
-
-I agree to the Terms and Conditions.
-
-</label>
-
-<button type="submit">
-
-Create Account
-
-</button>
+  <p id="registerMessage" style="margin-top:15px;"></p>
 
 </form>
-
 <p class="register-link">
 
 Already have an account?
