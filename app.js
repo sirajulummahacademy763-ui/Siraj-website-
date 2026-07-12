@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const GAS_WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GAS_WEB_APP_URL = "
+    https://script.google.com/macros/s/AKfycbxhalPj8Dc1ZQz9ilpqt7007npiiKv8l4mb97yK4rJ9KYuYmIDH2IERsDsDFx_8dY6J/exec    ";
 
 document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.getElementById("registerForm");
