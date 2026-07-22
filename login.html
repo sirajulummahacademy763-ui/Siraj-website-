@@ -104,7 +104,31 @@ Create Account
     
 </section>
 
-<script src="app.js"></script>
+<script type="module" src="auth.js">
+
+  const loginForm = document.getElementById('login-form');
+
+if (loginForm) {
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password
+    });
+
+    if (error) {
+      alert(`Login failed: ${error.message}`);
+    } else {
+      alert('Logged in successfully!');
+      window.location.href = 'Dashboard.html'; // Sends user to dashboard page
+    }
+  });
+}
+</script>
 
 </body>
 </html>
