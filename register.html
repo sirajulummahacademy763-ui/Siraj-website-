@@ -99,7 +99,39 @@ Already have an account?
 <script src="config.js"></script>
 <script src="supabaseClient.js"></script>
 <script src="nav.js"></script>
-<script src="auth.js"></script>
+
+  <script type="module" src="auth.js">
+
+    import { supabase } from './SupabaseClient.js'
+
+const registerForm = document.getElementById('register-form');
+
+if (registerForm) {
+  registerForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const fullName = document.getElementById('full-name').value;
+
+    // Send registration request to your Supabase authentication engine
+    const { data, error } = await supabase.auth.signUp({
+      email: email,
+      password: password,
+      options: {
+        data: { full_name: fullName } // Saves extra student info
+      }
+    });
+
+    if (error) {
+      alert(`Error signing up: ${error.message}`);
+    } else {
+      alert('Success! Check your email inbox to verify your student account, then try logging in.');
+      window.location.href = 'login.html';
+    }
+  });
+}
+  </script>
 
 </body>
 
